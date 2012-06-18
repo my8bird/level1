@@ -1,0 +1,19 @@
+{
+	"name":	"level1",
+	"keywords":	[
+		"database",
+		"leveldb"
+	],
+	"description":	"level1 is a JavaScript API over leveldb",
+	"homepage":		"https://github.com/JosePedroDias/level1",
+	"dependencies": {
+		"node-leveldb":	"~0.6.2"
+	},
+	"repository": {
+		"type":	"git",
+		"url":	"https://github.com/JosePedroDias/level1.git"
+	},
+	"contributors": [
+		"José Pedro Dias <jose.pedro.dias@gmail.com"
+	]
+}
