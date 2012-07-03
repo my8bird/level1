@@ -28,79 +28,99 @@ level1('ONE.db', function(err, db) {
 
 ### get / query
 
-```db.get(
+```javascript
+db.get(
 	{String}			id,
 	{Function(err, x)}	callback
-)```
+)
+```
 
 ---
 
-```db.getOrUndefined(
+```javascript
+db.getOrUndefined(
 	{String}			id,
 	{Function(err, x)}	callback
-)```
+)
+```
 
 ---
 
-```db.query(
+```javascript
+db.query(
 	{Boolean Function(doc, index)}	filterFn,
 	{Function(err, docs)}			callback
-)```
+)
+```
 
 ---
 
-```{Object[]} db.sortPaginate(
+```javascript
+{Object[]} db.sortPaginate(
 	{Object[]}						docs,
 	[{Boolean Function(doc1, doc2)}	sortFn],
 	[{Number}						docsPerPage],
 	[{Number}						pageNr]
-)```
+)
+```
 
 
 
 ### set (create/update)
 
-```db.set(
+```javascript
+db.set(
 	{Object}			doc,
 	[{Function(err, x)}	callback]
-)```
+)
+```
 
 ---
 
-```db.setBulk(
+```javascript
+db.setBulk(
 	{Object[]}			docs,
 	[{Function(err, x)}	callback]
-)```
+)
+```
 
 ---
 
-```db.updateQuery(
+```javascript
+db.updateQuery(
 	{Boolean Function(doc, index)}	filterFn,
 	{Function(doc)}					updateFn
 	?
-)```
+)
+```
 
 
 
 ### delete
 
-```db.del(
+```javascript
+db.del(
 	{String}			id,
 	[{Function(err, x)}	callback]
-)```
+)
+```
 
 ---
 
-```db.delBulk(
+```javascript
+db.delBulk(
 	{String[]}			arrayOfIds,
 	[{Function(err, x)}	callback]
 	?
-)```
+)
+```
 
 ---
 
-```db.delQuery(
+```javascript
+db.delQuery(
 	{Boolean Function(doc, index)}	filterFn,
 	[{Function(err, x)}	callback]
 	?
-)```
+)
+```
