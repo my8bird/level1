@@ -1,4 +1,4 @@
-var level1 = require('./level1');
+var level1 = require('./index');
 
 
 level1('ONE.db', function(err, db) {
