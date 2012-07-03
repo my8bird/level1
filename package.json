@@ -1,5 +1,6 @@
 {
-	"name":	"level1",
+	"name":			"level1",
+	"version":		"0.0.3",
 	"keywords":	[
 		"database",
 		"leveldb"
@@ -7,7 +8,7 @@
 	"description":	"level1 is a JavaScript API over leveldb",
 	"homepage":		"https://github.com/JosePedroDias/level1",
 	"dependencies": {
-		"node-leveldb":	"~0.6.2"
+		"leveldb":	"~0.6.2"
 	},
 	"repository": {
 		"type":	"git",
