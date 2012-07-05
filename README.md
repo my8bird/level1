@@ -53,6 +53,17 @@ db.query(
 )
 ```
 
+
+
+### advanced query ops
+
+```javascript
+db.count(
+	[{Boolean Function(doc)}	filterFn],
+	{Function(err, count)}		cb]
+)
+```
+
 ---
 
 ```javascript
@@ -63,6 +74,25 @@ db.query(
 	[{Number}						pageNr]
 )
 ```
+
+Synchronous function that receives a query result and applies sorting and/or pagination.
+
+---
+
+```javascript
+{Object[]} db.groupBy(
+	{Object[]}						docs,
+	{String|String Function(doc)}	propertyOrFn,
+	[{Boolean}						asArray],
+	[{Boolean}						skipDocs]
+)
+```
+
+Synchronous function that receives a query result and groups it by a property or other criteria extracted via a function.
+
+If asArray is trueish, the array of sorted results, each one `{key, count, [docs[]]}`.
+
+Otherwise returns an object with propertyValues as keys and related docs as value.
 
 
 
@@ -90,7 +120,6 @@ db.setBulk(
 db.updateQuery(
 	{Boolean Function(doc, index)}	filterFn,
 	{Function(doc)}					updateFn
-	?
 )
 ```
 
@@ -101,7 +130,7 @@ db.updateQuery(
 ```javascript
 db.del(
 	{String}			id,
-	[{Function(err, x)}	callback]
+	[{Function(err)}	callback]
 )
 ```
 
@@ -110,8 +139,7 @@ db.del(
 ```javascript
 db.delBulk(
 	{String[]}			arrayOfIds,
-	[{Function(err, x)}	callback]
-	?
+	[{Function(err)}	callback]
 )
 ```
 
@@ -120,7 +148,6 @@ db.delBulk(
 ```javascript
 db.delQuery(
 	{Boolean Function(doc, index)}	filterFn,
-	[{Function(err, x)}	callback]
-	?
+	[{Function(err)}				callback]
 )
 ```
